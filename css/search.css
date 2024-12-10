@@ -1,0 +1,31 @@
+.container {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 5px 5px;
+    grid-auto-flow: row;
+  }
+  
+  .-site-header { grid-area: 1 / 1 / 2 / 6; }
+  
+  .bento { grid-area: 2 / 2 / 5 / 5; }
+  
+  .piano { grid-area: 5 / 2 / 6 / 5; }
+  
+  .item1 { grid-area: 2 / 2 / 3 / 3; }
+  
+  .item2 { grid-area: 2 / 3 / 3 / 4; }
+  
+  .item3 { grid-area: 2 / 4 / 3 / 5; }
+  
+  .artist1 { grid-area: 3 / 2 / 4 / 3; }
+  
+  .artist2 { grid-area: 3 / 3 / 4 / 4; }
+  
+  .artist3 { grid-area: 3 / 4 / 4 / 5; }
+  
+  .album1 { grid-area: 4 / 2 / 5 / 3; }
+  
+  .album2 { grid-area: 4 / 3 / 5 / 4; }
+  
+  .album3 { grid-area: 4 / 4 / 5 / 5; }
+  
