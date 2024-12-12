@@ -176,7 +176,7 @@ function generateRandomString(length) {
           scope: 'user-read-private user-read-email user-top-read',
           code_challenge_method: 'S256',
           code_challenge,
-          redirect_uri: 'http://127.0.0.1:5501',
+          redirect_uri: 'https://j0rgw.github.io./',
         },
       );
     });
