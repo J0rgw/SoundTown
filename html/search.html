@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/cardStyles.css">
+    <link rel="stylesheet" href="/css/styleP.css">
+    <link rel="stylesheet" href="/css/search.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="/js/nav.js" defer></script>
+    <script src="/js/piano.js" defer></script>
+    <script src="/js/search.js" defer></script>
+</head>
+
+<body>
+    <div id="globalWrapper">
+        <header class="site-header">
+            <h1 class="sr-only"><a href="/index.html">SoundTown</a></h1>
+            <div class="fieldset-wrapper">
+                <fieldset>
+                    <div id="search-bar">
+                        <input type="search" class="search-input" name="search" placeholder="Search..." maxlength="100"
+                            id="search" />
+                    </div>
+                </fieldset>
+            </div>
+            <div class="fieldset-wrapper">
+                <fieldset>
+                    <div id="login" onmouseover="shadowL()" onmouseleave="shadowL()">
+                        <input type="button" class="login-input" name="login" id="login-button">
+                    </div>
+                </fieldset>
+            </div>
+        </header>
+        <div class="containercard">
+            <div class="album1 album"></div>
+            <div class="album2 album"></div>
+            <div class="album3 album"></div>
+            <div class="track1 track"></div>
+            <div class="track2 track"></div>
+            <div class="track3 track"></div>
+            <div class="artist1 artist"></div>
+            <div class="artist2 artist"></div>
+            <div class="artist3 artist"></div>
+            <div id="piano" class="piano"></div>
+        </div>
+    </div>
+    
+</body>
+
+</html>

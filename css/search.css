@@ -1,0 +1,133 @@
+/* html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.site-header {
+  grid-area: site-header;
+}
+
+.track, .artist, .album, .piano {
+  max-width: 100%;
+  padding: 10px;
+}
+
+.track, .artist, .album {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flip-container {
+  perspective: 1000px;
+}
+
+.flipper {
+  position: relative;
+  width: var(--album-cover-size);
+  height: var(--album-cover-size);
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+.flipped .flipper {
+  transform: rotateY(180deg);
+}
+
+#search {
+  overflow: hidden;
+}
+
+.piano {
+   /* Adjust height as needed */
+
+
+
+.containercard {  
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr;
+  gap: 3rem 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . ."
+    "album1 album2 album3"
+    "track1 track2 track3"
+    "artist1 artist2 artist3"
+    "piano piano piano";
+    align-items: center;
+}
+
+.site-header { 
+
+  padding: 10px;
+  width: 100%;
+  background-color: #121212;
+}
+
+.album1 { grid-area: album1; }
+
+.album2 { grid-area: album2; }
+
+.album3 { grid-area: album3; }
+
+.track1 { grid-area: track1; }
+
+.track2 { grid-area: track2; }
+
+.track3 { grid-area: track3; }
+
+.artist1 { grid-area: artist1; }
+
+.artist2 { grid-area: artist2; }
+
+.artist3 { grid-area: artist3; }
+
+.piano { grid-area: piano; 
+  width: 100%;
+  height: 100px;
+  
+}
+
+.sr-only a{
+  text-decoration: none;
+  color: #fff;
+
+}
+
+.album, .track, .artist {
+  padding-left: 100px;
+
+  backface-visibility: hidden;
+	transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.rotation {
+	transform: rotateY(180deg);
+  }

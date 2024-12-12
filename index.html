@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="J0rgw in github" />
+    <meta name="copyright" content="all comercial rights go to spotify" />
+    <meta name="robots" content="index, follow"/>
+    <meta name="keywords" content="六四天安門">
+    <meta name="keywords" content="A website that connects to Spotify to bring you the latest albums, music recommendations and everything you listen to"/>
+
+    <title>Soundtown</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/styleP.css">
+    <link rel="stylesheet" href="/css/cardStyles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/scroll.css">
+    <script src="/js/search.js" defer></script>
+    <script src="/js/card.js" defer></script>
+    <script src="/js/nav.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="js/spotify.js" defer></script>
+
+    <!-- <script type="module" src="/js/animation.js" defer></script> -->
+</head>
+
+<body>
+    <div id="globalWrapper">
+        <header class="site-header">
+            <h1 class="sr-only">SoundTown</h1>
+            <div class="fieldset-wrapper">
+                <fieldset>
+                    <legend class="sr-only">Effects</legend>
+                    <div id="search-bar">
+                            <input type="search" class="search-input" name="search" placeholder="Search..."
+                                maxlength="100" id="search"/>
+
+                    </div>
+                </fieldset>
+            </div>
+            <div class="fieldset-wrapper">
+                <fieldset>
+                    <div id="login" onmouseover="shadowL()" onmouseleave="shadowL()">
+                        <input type="button" class="login-input" name="login" id="login-button">
+                    </div>
+                </fieldset>
+            </div>
+        </header>
+        <main>
+            <section id="cover" class="section">
+                <div class="content">
+
+                    <h2 id="BIG-title">Sound
+            Town</h2>
+                    <div id="hp"></div>
+                    <button id="logout-button" hidden>
+                        Logout
+                    </button>
+                    <div class="text">
+                        <p>Discover music and review your <code class="selector">Spotify</code> stats.</p>
+                        <p>This is <code class="selector">SoundTown</code> a web that does just <code
+                                class="property">THAT</code>.
+                        </p>
+                        <p>Quick Guide: <code class="selector">Log in</code> to get personal recomendations <code
+                                class="property"><BR>DIVE IN NOW!</code></p>
+                    </div>
+                    <script src="https://kit.fontawesome.com/1630846f6f.js" crossorigin="anonymous"></script>
+                    <div class="socials">
+                    <ul>
+                        <li class="icon"><a target="_blank" href="https://www.linkedin.com/in/jorge-arcas-verdejo-18ba29255/" class="fas fa fa-linkedin"></a></li>
+                        <li class="icon"><a target="_blank" href="https://github.com/J0rgw" class="fas fa fa-github"></a></li>
+                        <li class="icon"><a target="_blank" href="https://open.spotify.com/user/gameover2003" class="fas fa fa-spotify"></a></li>
+                    </ul>
+                    </div>
+                </div>
+            </section>
+            <section id="album-discover" class="section">
+                <div class="content">
+                    <!-- higlight the word albums -->
+                    <h2 id="BIG-title">Weekly Discovers</h2>
+                    <div class="container">
+                        <div class="middleArea"></div>
+                        <div class="mySlider">
+                            <div class="slideItems item1 active">
+                                <div class="flip-container">
+                                    <div class="flipper">
+                                        <div class="front" id="1">
+                                            <!-- Front content -->
+                                        </div>
+                                        <div class="back" id="1">
+                                            <!-- Back content -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slideItems item2 next">
+                                <div class="flip-container">
+                                    <div class="flipper">
+                                        <div class="front">
+                                            <!-- Front content -->
+                                        </div>
+                                        <div class="back">
+                                            <!-- Back content -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slideItems item3 next">
+                                <div class="flip-container">
+                                    <div class="flipper">
+                                        <div class="front" id="3">
+                                            <!-- Front content -->
+                                        </div>
+                                        <div class="back" id="3">
+                                            <!-- Back content -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slideItems item4 next">
+                                <div class="flip-container">
+                                    <div class="flipper">
+                                        <div class="front" id="4">
+                                            <!-- Front content -->
+                                        </div>
+                                        <div class="back" id="4">
+                                            <!-- Back content -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slideItems item5 next">
+                                <div class="flip-container">
+                                    <div class="flipper">
+                                        <div class="front">
+                                            <!-- Front content -->
+                                        </div>
+                                        <div class="back">
+                                            <!-- Back content -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="myNavs">
+                            <div class="left"><i id="navleft" class="fa fa-caret-left"></i></div>
+                            <div class="right"><i id="navright" class="fa fa-caret-right"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="album-releases" class="section">
+                <div class="content">
+                    <h2 id="BIG-title">NEW Releases</h2>
+                    <div class="container">
+                        <div class="middleArea"></div>
+                        <div class="mySlider">
+                            <div class="slideItems item1 active">
+                                <div class="flip-container">
+                                    <div class="flipper">
+                                        <div class="front" id="1">
+                                            <!-- Front content -->
+                                        </div>
+                                        <div class="back" id="1">
+                                            <!-- Back content -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="slideItems item2 next">
+                                <div class="flip-container">
+                                    <div class="flipper">
+                                        <div class="front">
+                                            <!-- Front content -->
+                                        </div>
+                                        <div class="back">
+                                            <!-- Back content -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="slideItems item3 next">
+                                <div class="flip-container">
+                                    <div class="flipper">
+                                        <div class="front" id="3">
+                                            <!-- Front content -->
+                                        </div>
+                                        <div class="back" id="3">
+                                            <!-- Back content -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slideItems item4 next">
+                                <div class="flip-container">
+                                    <div class="flipper">
+                                        <div class="front" id="4">
+                                            <!-- Front content -->
+                                        </div>
+                                        <div class="back" id="4">
+                                            <!-- Back content -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slideItems item5 next">
+                                <div class="flip-container">
+                                    <div class="flipper">
+                                        <div class="front">
+                                            <!-- Front content -->
+                                        </div>
+                                        <div class="back">
+                                            <!-- Back content -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="myNavs">
+                            <div class="left"><i id="navleft" class="fa fa-caret-left"></i></div>
+                            <div class="right"><i id="navright" class="fa fa-caret-right"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="album-month" class="section">
+                <div class="content">
+                    <h2 id="BIG-title">Monthly stats</h2>
+                    <div class="container">
+                        <div class="middleArea"></div>
+                        <div class="mySlider">
+                            <div class="slideItems item1 active">
+                                <div class="flip-container">
+                                    <div class="flipper">
+                                        <div class="front" id="1">
+                                            <!-- Front content -->
+                                        </div>
+                                        <div class="back" id="1">
+                                            <!-- Back content -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slideItems item2 next">
+                                <div class="flip-container">
+                                    <div class="flipper">
+                                        <div class="front">
+                                            <!-- Front content -->
+                                        </div>
+                                        <div class="back">
+                                            <!-- Back content -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slideItems item3 next">
+                                <div class="flip-container">
+                                    <div class="flipper">
+                                        <div class="front" id="3">
+                                            <!-- Front content -->
+                                        </div>
+                                        <div class="back" id="3">
+                                            <!-- Back content -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slideItems item4 next">
+                                <div class="flip-container">
+                                    <div class="flipper">
+                                        <div class="front" id="4">
+                                            <!-- Front content -->
+                                        </div>
+                                        <div class="back" id="4">
+                                            <!-- Back content -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slideItems item5 next">
+                                <div class="flip-container">
+                                    <div class="flipper">
+                                        <div class="front">
+                                            <!-- Front content -->
+                                        </div>
+                                        <div class="back">
+                                            <!-- Back content -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="myNavs">
+                            <div class="left"><i id="navleft" class="fa fa-caret-left"></i></div>
+                            <div class="right"><i id="navright" class="fa fa-caret-right"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="album-year" class="section">
+                <div class="content">
+                    <h2 id="BIG-title">Yearly stats</h2>
+                    <div class="container">
+                        <div class="middleArea"></div>
+                        <div class="mySlider">
+                            <div class="slideItems item1 active">
+                                <div class="flip-container">
+                                    <div class="flipper">
+                                        <div class="front" id="1">
+                                            <!-- Front content -->
+                                        </div>
+                                        <div class="back" id="1">
+                                            <!-- Back content -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slideItems item2 next">
+                                <div class="flip-container">
+                                    <div class="flipper">
+                                        <div class="front">
+                                            <!-- Front content -->
+                                        </div>
+                                        <div class="back">
+                                            <!-- Back content -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slideItems item3 next">
+                                <div class="flip-container">
+                                    <div class="flipper">
+                                        <div class="front" id="3">
+                                            <!-- Front content -->
+                                        </div>
+                                        <div class="back" id="3">
+                                            <!-- Back content -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slideItems item4 next">
+                                <div class="flip-container">
+                                    <div class="flipper">
+                                        <div class="front" id="4">
+                                            <!-- Front content -->
+                                        </div>
+                                        <div class="back" id="4">
+                                            <!-- Back content -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slideItems item5 next">
+                                <div class="flip-container">
+                                    <div class="flipper">
+                                        <div class="front">
+                                            <!-- Front content -->
+                                        </div>
+                                        <div class="back">
+                                            <!-- Back content -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="myNavs">
+                            <div class="left"><i id="navleft" class="fa fa-caret-left"></i></div>
+                            <div class="right"><i id="navright" class="fa fa-caret-right"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Developed and tested by @J0rgw<span class="emoji">🎶</span></p>
+        </footer>
+    </div>
+</body>
+
+</html>
