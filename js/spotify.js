@@ -441,7 +441,7 @@
   // Your client id from your app in the spotify dashboard:
   // https://developer.spotify.com/dashboard/applications
   const client_id = '85e79f9ec9e14e429c5b2c6c36bdd97f';
-  const redirect_uri = 'http://127.0.0.1:5501'; // Your redirect uri
+  const redirect_uri = 'https://j0rgw.github.io./'; // Your redirect uri
 
   // Restore tokens from localStorage
   let access_token = localStorage.getItem('access_token') || null;
