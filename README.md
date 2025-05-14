@@ -1,6 +1,6 @@
 # SoundTown
 
-SoundTown is a web-based application designed to provide an engaging and interactive experience for music enthusiasts. The app features a variety of tools and resources, including charts, search functionality, and visual assets, to explore and enjoy music-related content.
+SoundTown is a web-based application designed to provide an engaging and interactive experience for music enthusiasts. Basically a fancy frontend project to try the spotify API done un december of 2024, also mainly because I want to test the new scroll snap types :) .
 
 ## Features
 
@@ -19,11 +19,19 @@ Check out the live version of the app here: [SoundTown](https://soundtownmusic.n
 SoundTown is structured as a single-page application with 5 scroll-snap sections:
 
 1. **Landing Page**: The introductory section that welcomes users to the app.
-2. **Discover Weekly**: The introductory section that welcomes users to the app.
+2. **Discover Weekly**: The section dedicated to show new discoveries of albums based on your fave artists, genres and albums.
 3. **New Releases**: The section dedicated to show new releases based on your fave genres.
 4. **Monthly Stats**: The section dedicated to show monthly resume of your top 5 listened albums.
 5. **Yearly Stats**: The section dedicated to show yearly resume of your top 5 listened albums.
 
+## Technology Stack
+
+SoundTown leverages the following technologies:
+
+- **CSS**: For styling and creating a visually appealing user interface.
+- **JavaScript (JS)**: For adding interactivity and dynamic behavior to the app.
+- **jQuery**: Simplifies DOM manipulation and enhances JavaScript functionality.
+- **Netlify**: Used for hosting the live version of the app.
 
 ## Project Structure
 
